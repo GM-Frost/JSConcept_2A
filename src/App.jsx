@@ -24,10 +24,8 @@ function App() {
   }
 
   function printStudentInfo() {
-    const allStudents = [];
-
-    students.forEach((student, index) => {
-      allStudents.push(
+    return students.map((student, index) => {
+      return (
         <div
           key={index}
           style={{
@@ -53,7 +51,6 @@ function App() {
         </div>
       );
     });
-    return <div>{allStudents}</div>;
   }
   return printStudentInfo();
 }
